@@ -1,0 +1,3 @@
+addict
+scipy
+pydot

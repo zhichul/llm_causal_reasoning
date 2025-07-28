@@ -1,0 +1,2 @@
+accuracy: "lambda x, t: x <= t"
+tvd: "lambda x: x"

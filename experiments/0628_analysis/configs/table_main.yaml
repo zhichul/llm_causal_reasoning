@@ -1,0 +1,58 @@
+lines:
+  # rl generic prompt
+  - name: rl 7b strict +filter
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 7b strict
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 7b soft
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0521_grpo]
+    scorer: score_tvd
+
+  - name: rl 7b strict +filter +s
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0406_grpo]
+    scorer: score_tvd
+  - name: rl 7b strict +s
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0406_grpo]
+    scorer: score_tvd
+  - name: rl 7b soft +s
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0406_grpo]
+    scorer: score_tvd
+
+  - name: rl 32b strict +filter
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 32b strict
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 32b soft
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0521_grpo]
+    scorer: score_tvd
+
+  - name: rl 32b strict +filter +s
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0406_grpo]
+    scorer: score_tvd
+  - name: rl 32b strict +s
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0406_grpo]
+    scorer: score_tvd
+  - name: rl 32b soft +s
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0406_grpo]
+    scorer: score_tvd
+  # sft
+  - name: sft 7b es-loss
+    key: [sft, qwen_2.5_instruct, 7b, loss, 0521_grpo]
+    scorer: score_tvd_sft
+  - name: sft 7b es-reward
+    key: [sft, qwen_2.5_instruct, 7b, approx_reward, 0521_grpo]
+    scorer: score_tvd_sft
+
+metric:
+  key: [accuracy]
+  name: accuracy at threshold 0.01
+  kwargs:
+    - t: 0.01
+    - t: 0.02
+    - t: 0.03
+
+breakdowns: [ve, treewidth, size, depth]

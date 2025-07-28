@@ -1,0 +1,53 @@
+extract_0_2:
+  rl:
+    qwen_2.5_instruct:
+      7b:
+        strict:
+          0521_grpo:
+            n15v2: ../0701_trace/analysis/extraction_0_2/gpt_4_1_t0.0_len8192/rl/qwen_2.5_instruct/7b/strict/0521_grpo/n15v2
+        lenient:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/extraction_0_2/gpt_4_1_t0.0_len8192/rl/qwen_2.5_instruct/7b/lenient/0521_grpo/n15v2
+        filter:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/extraction_0_2/gpt_4_1_t0.0_len8192/rl/qwen_2.5_instruct/7b/filter/0521_grpo/n15v2
+      32b:
+        strict:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/extraction_0_2/gpt_4_1_t0.0_len8192/rl/qwen_2.5_instruct/32b/strict/0521_grpo/n15v2
+        lenient:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/extraction_0_2/gpt_4_1_t0.0_len8192/rl/qwen_2.5_instruct/32b/lenient/0521_grpo/n15v2
+        filter:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/extraction_0_2/gpt_4_1_t0.0_len8192/rl/qwen_2.5_instruct/32b/filter/0521_grpo/n15v2
+
+modeling_error_0_1:
+  rl:
+    qwen_2.5_instruct:
+      7b:
+        strict:
+          0521_grpo:
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/7b/strict/0521_grpo/n15v2
+        lenient:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/7b/lenient/0521_grpo/n15v2
+        filter:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/7b/filter/0521_grpo/n15v2
+        init:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/7b/init/0521_grpo/n15v2
+      32b:
+        strict:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/32b/strict/0521_grpo/n15v2
+        lenient:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/32b/lenient/0521_grpo/n15v2
+        filter:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/32b/filter/0521_grpo/n15v2
+        init:
+          0521_grpo: 
+            n15v2: ../0701_trace/analysis/modeling_error_0_1/o4_mini_t0.0_len8192/rl/qwen_2.5_instruct/32b/init/0521_grpo/n15v2

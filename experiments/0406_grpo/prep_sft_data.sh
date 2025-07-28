@@ -1,0 +1,125 @@
+
+for graph_spec in n5v2 n10v2 n15v2
+do
+for data_source in ../../data/2025-06-03-1/interventional_distribution
+do
+data_name=0406_intv_dist
+seed=42
+
+# generate main split
+python3 prepare_ppo_data.py \
+    --local_dir data/sft/${graph_spec} \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --data_name ${data_name}
+
+# generate monitor split (small subsets of 100 so that in-training-loop eval don't take forever)
+python3 prepare_ppo_data.py \
+    --first 100 \
+    --local_dir data/sft/${graph_spec}/monitor \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --data_name ${data_name}
+
+
+# split by ancestor depth
+for i in $(seq 0 5)
+do
+python3 prepare_ppo_data.py \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --filter_key ancestor_depth \
+    --filter_val ${i} \
+    --local_dir data/sft/${graph_spec}/d${i} \
+    --data_name ${data_name}
+done
+
+# split by ancestor depth, small training set 2k
+python3 prepare_ppo_data.py \
+    --first 2000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --local_dir data/sft/${graph_spec}/2k/ \
+    --data_name ${data_name} \
+    
+
+for i in $(seq 0 5)
+do
+python3 prepare_ppo_data.py \
+    --first 2000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --filter_key ancestor_depth \
+    --filter_val ${i} \
+    --local_dir data/sft/${graph_spec}/2k/d${i} \
+    --data_name ${data_name} \
+    
+done
+
+# split by ancestor depth, small training set 4k
+python3 prepare_ppo_data.py \
+    --first 4000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --local_dir data/sft/${graph_spec}/4k/ \
+    --data_name ${data_name} \
+    
+
+for i in $(seq 0 5)
+do
+python3 prepare_ppo_data.py \
+    --first 4000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --filter_key ancestor_depth \
+    --filter_val ${i} \
+    --local_dir data/sft/${graph_spec}/4k/d${i} \
+    --data_name ${data_name} \
+    
+done
+
+# split by ancestor depth, small training set
+python3 prepare_ppo_data.py \
+    --first 8000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --local_dir data/sft/${graph_spec}/8k/ \
+    --data_name ${data_name} \
+    
+
+for i in $(seq 0 5)
+do
+python3 prepare_ppo_data.py \
+    --first 8000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --filter_key ancestor_depth \
+    --filter_val ${i} \
+    --local_dir data/sft/${graph_spec}/8k/d${i} \
+    --data_name ${data_name} \
+    
+done
+
+# split by ancestor depth, small training set
+python3 prepare_ppo_data.py \
+    --first 16000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --local_dir data/sft/${graph_spec}/16k/ \
+    --data_name ${data_name} \
+    
+
+for i in $(seq 0 5)
+do
+python3 prepare_ppo_data.py \
+    --first 16000 \
+    --data_source $data_source \
+    --data_subsplits ${graph_spec} \
+    --filter_key ancestor_depth \
+    --filter_val ${i} \
+    --local_dir data/sft/${graph_spec}/16k/d${i} \
+    --data_name ${data_name} \
+    
+done
+done
+done

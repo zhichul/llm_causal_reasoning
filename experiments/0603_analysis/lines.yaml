@@ -1,0 +1,45 @@
+
+- folder: 0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/
+  step: global_step_10000
+  reward_fn: score_tvd
+  name: specific_prompt_strict
+- folder: 0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/
+  step: global_step_10000
+  reward_fn: score_tvd
+  name: specific_prompt_lenient
+
+- folder: 0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/
+  step: global_step_10000
+  reward_fn: score_tvd
+  name: generic_prompt_strict
+- folder: 0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/
+  step: global_step_10000
+  reward_fn: score_tvd
+  name: generic_prompt_lenient
+
+- folder: 0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/
+  step: global_step_5000
+  reward_fn: score_tvd
+  name: specific_prompt_filter
+- folder: 0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/
+  step: global_step_5000
+  reward_fn: score_tvd
+  name: generic_prompt_filter
+  
+- folder: 0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/
+  step: global_step_best_loss
+  reward_fn: score_tvd_sft
+  name: specific_prompt_sft_loss
+- folder: 0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/
+  step: global_step_best_loss
+  reward_fn: score_tvd_sft
+  name: generic_prompt_sft_loss
+
+- folder: 0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/
+  step: global_step_best_reward
+  reward_fn: score_tvd_sft
+  name: specific_prompt_sft_reward
+- folder: 0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/
+  step: global_step_best_reward
+  reward_fn: score_tvd_sft
+  name: generic_prompt_sft_reward

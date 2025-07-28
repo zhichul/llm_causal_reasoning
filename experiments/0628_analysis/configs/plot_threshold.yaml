@@ -1,0 +1,119 @@
+lines:
+  # rl generic prompt  
+
+  - name: rl 32b strict +filter
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0521_grpo]
+    color: gold
+    linestyle: dotted
+    scorer: score_tvd
+
+  - name: rl 32b strict
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0521_grpo]
+    color: red
+    linestyle: dotted
+    scorer: score_tvd
+
+  - name: rl 32b soft
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0521_grpo]
+    color: orange
+    linestyle: dotted
+    scorer: score_tvd
+    
+  - name: rl 7b strict +filter
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0521_grpo]
+    color: gold
+    linestyle: solid
+    scorer: score_tvd
+
+  - name: rl 7b strict
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0521_grpo]
+    color: red
+    linestyle: solid
+    scorer: score_tvd
+
+  - name: rl 7b soft
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0521_grpo]
+    color: orange
+    linestyle: solid
+    scorer: score_tvd
+
+  # rl specific prompt
+  - name: rl 32b strict +filter
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0406_grpo]
+    color: gold
+    linestyle: dashdot
+    scorer: score_tvd
+
+  - name: rl 32b strict
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0406_grpo]
+    color: red
+    linestyle: dashdot
+    scorer: score_tvd
+
+  - name: rl 32b soft
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0406_grpo]
+    color: orange
+    linestyle: dashdot
+    scorer: score_tvd
+
+  - name: rl 7b strict +filter
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0406_grpo]
+    color: gold
+    linestyle: dashed
+    scorer: score_tvd
+
+  - name: rl 7b strict
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0406_grpo]
+    color: red
+    linestyle: dashed
+    scorer: score_tvd
+
+  - name: rl 7b soft
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0406_grpo]
+    color: orange
+    linestyle: dashed
+    scorer: score_tvd
+
+  # sft specific prompt
+  - name: sft 7b es-loss
+    key: [sft, qwen_2.5_instruct, 7b, loss, 0406_grpo]
+    color: blue
+    linestyle: dashed
+    scorer: score_tvd_sft
+
+  - name: sft 7b es-reward
+    key: [sft, qwen_2.5_instruct, 7b, approx_reward, 0406_grpo]
+    color: purple
+    linestyle: dashed
+    scorer: score_tvd_sft
+
+  # sft generic prompt
+  - name: sft 7b es-loss
+    key: [sft, qwen_2.5_instruct, 7b, loss, 0521_grpo]
+    color: green
+    linestyle: solid
+    scorer: score_tvd_sft
+
+  - name: sft 7b es-reward
+    key: [sft, qwen_2.5_instruct, 7b, approx_reward, 0521_grpo]
+    color: brown
+    linestyle: solid
+    scorer: score_tvd_sft
+
+ymin: 0.0,
+ymax: 1.0,
+shade_alpha: 0.2
+shade_se_multiplier: 2
+metric:
+  key: [accuracy]
+  name: accuracy
+  kwargs:
+    t:
+      min: 0.01
+      max: 0.1
+      num: 100
+x:
+  key: t
+  name: threshold
+
+breakdowns: [ve, treewidth, size, depth]

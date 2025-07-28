@@ -1,0 +1,89 @@
+rl:
+  qwen_2.5_instruct:
+    7b:
+      strict:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n15v2/2k/dev.parquet
+      lenient:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_10000/n15v2/2k/dev.parquet
+      filter:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_5000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_5000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_5000/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_5000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_5000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_5000/n15v2/2k/dev.parquet
+      init:
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/Qwen2.5-7B-Instruct/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/Qwen2.5-7B-Instruct/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/Qwen2.5-7B-Instruct/n15v2/2k/dev.parquet
+    32b:
+      strict:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n15v2/2k/dev.parquet
+      lenient:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_lenient_ent0.001_rt1.0_fltmean_correctness_fltmin-0.01_fltmax1.01/global_step_5000/n15v2/2k/dev.parquet
+      filter:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_1750/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_1750/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0406_grpo/brian-rlxf-sweep/exp_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_1750/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_1750/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_1750/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/brian-rlxf-sweep/exp_short_prompt_dapo_n10v2_model_Qwen2_5_32B_Instruct_bs8_lr1e-6_roll32_p2048_r4096_ts8k_rwdscore_strict_ent0.001_rt1.0_fltmean_correctness_fltmin0.09_fltmax0.91/global_step_1750/n15v2/2k/dev.parquet
+      init:
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0521_grpo/Qwen2.5-32B-Instruct/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0521_grpo/Qwen2.5-32B-Instruct/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0521_grpo/Qwen2.5-32B-Instruct/n15v2/2k/dev.parquet
+sft:
+  qwen_2.5_instruct:
+    7b:
+      loss:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_loss/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_loss/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_loss/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_loss/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_loss/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_loss/n15v2/2k/dev.parquet
+      approx_reward:
+        0406_grpo:
+          n5v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_reward/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_reward/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0406_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_reward/n15v2/2k/dev.parquet
+        0521_grpo:
+          n5v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_reward/n5v2/2k/dev.parquet
+          n10v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_reward/n10v2/2k/dev.parquet
+          n15v2: ../0603_analysis/generations/0603_sft/brian-sft-sweep/exp_0521_n10v2_model_Qwen2_5_7B_Instruct_bs8_lr1e-6_len2048_ts8k_lora0/global_step_best_reward/n15v2/2k/dev.parquet

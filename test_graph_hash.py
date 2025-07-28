@@ -1,0 +1,16 @@
+import networkx as nx
+
+g1 = nx.DiGraph()
+g1.add_node(1)
+g1.add_node(2)
+g1.add_node(3)
+g1.add_edge(1, 2)
+g1.add_edge(2, 3)
+print("hash 1->2->3", nx.weisfeiler_lehman_graph_hash(g1))
+g2 = nx.DiGraph()
+g2.add_node(1)
+g2.add_node(2)
+g2.add_node(3)
+g2.add_edge(1, 2)
+g2.add_edge(3, 2)
+print("hash 1->2<-3", nx.weisfeiler_lehman_graph_hash(g2))

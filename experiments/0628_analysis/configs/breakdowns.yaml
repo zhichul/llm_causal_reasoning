@@ -1,0 +1,136 @@
+
+ve:
+  name: ve
+  columns:
+  - graph_spec: n10v2
+    name: n10v2 easy 
+    difficulty: 
+      key: ['ve_operations']
+    criterion: "lambda x: x <= 10" 
+  - graph_spec: n10v2
+    name: n10v2 medium 
+    difficulty:
+      key: ['ve_operations']
+    criterion: "lambda x: 10 < x <= 20" 
+  - graph_spec: n10v2
+    name: n10v2 hard 
+    difficulty:
+      key: ['ve_operations']
+    criterion: "lambda x: x > 20" 
+  - graph_spec: n15v2
+    name: n15v2 easy 
+    difficulty: 
+      key: ['ve_operations']
+    criterion: "lambda x: x <= 10" 
+  - graph_spec: n15v2
+    name: n15v2 medium 
+    difficulty:
+      key: ['ve_operations']
+    criterion: "lambda x: 10 < x <= 20" 
+  - graph_spec: n15v2
+    name: n15v2 hard 
+    difficulty:
+      key: ['ve_operations']
+    criterion: "lambda x: x > 20" 
+
+depth:
+  name: depth
+  columns:
+  - graph_spec: n10v2
+    name: n10v2 easy 
+    difficulty: 
+      key: ['longest_path_depth']
+    criterion: "lambda x: x <= 1" 
+  - graph_spec: n10v2
+    name: n10v2 medium 
+    difficulty:
+      key: ['longest_path_depth']
+    criterion: "lambda x: 1 < x <= 3" 
+  - graph_spec: n10v2
+    name: n10v2 hard 
+    difficulty:
+      key: ['longest_path_depth']
+    criterion: "lambda x: x > 3" 
+  - graph_spec: n15v2
+    name: n15v2 easy 
+    difficulty: 
+      key: ['longest_path_depth']
+    criterion: "lambda x: x <= 1" 
+  - graph_spec: n15v2
+    name: n15v2 medium 
+    difficulty:
+      key: ['longest_path_depth']
+    criterion: "lambda x: 1 < x <= 3" 
+  - graph_spec: n15v2
+    name: n15v2 hard 
+    difficulty:
+      key: ['longest_path_depth']
+    criterion: "lambda x: x > 3" 
+
+size:
+  name: size
+  columns:
+  - graph_spec: n10v2
+    name: n10v2 easy 
+    difficulty: 
+      key: ['ancestor_size']
+    criterion: "lambda x: x <= 2" 
+  - graph_spec: n10v2
+    name: n10v2 medium 
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: 2 < x <= 4" 
+  - graph_spec: n10v2
+    name: n10v2 hard 
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - graph_spec: n15v2
+    name: n15v2 easy 
+    difficulty: 
+      key: ['ancestor_size']
+    criterion: "lambda x: x <= 2" 
+  - graph_spec: n15v2
+    name: n15v2 medium 
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: 2 < x <= 4" 
+  - graph_spec: n15v2
+    name: n15v2 hard 
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+
+treewidth:
+  name: treewidth
+  columns:
+  - graph_spec: n10v2
+    name: n10v2 easy 
+    difficulty: 
+      key: ['ancestor_treewidth']
+    criterion: "lambda x: x <= 0" 
+  - graph_spec: n10v2
+    name: n10v2 medium 
+    difficulty:
+      key: ['ancestor_treewidth']
+    criterion: "lambda x: 0 < x <= 1" 
+  - graph_spec: n10v2
+    name: n10v2 hard 
+    difficulty:
+      key: ['ancestor_treewidth']
+    criterion: "lambda x: x > 1" 
+  - graph_spec: n15v2
+    name: n15v2 easy 
+    difficulty: 
+      key: ['ancestor_treewidth']
+    criterion: "lambda x: x <= 0" 
+  - graph_spec: n15v2
+    name: n15v2 medium 
+    difficulty:
+      key: ['ancestor_treewidth']
+    criterion: "lambda x: 0 < x <= 1" 
+  - graph_spec: n15v2
+    name: n15v2 hard 
+    difficulty:
+      key: ['ancestor_treewidth']
+    criterion: "lambda x: x > 1" 

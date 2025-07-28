@@ -1,0 +1,39 @@
+lines:
+  # rl generic prompt
+  - name: rl 7b strict +filter
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 7b strict
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 7b soft
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 7b init
+    key: [rl, qwen_2.5_instruct, 7b, init, 0521_grpo]
+    scorer: score_tvd
+
+  - name: rl 32b strict +filter
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 32b strict
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 32b soft
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0521_grpo]
+    scorer: score_tvd
+  - name: rl 32b init
+    key: [rl, qwen_2.5_instruct, 32b, init, 0521_grpo]
+    scorer: score_tvd
+
+breakdowns:
+  - key: size
+    sets: [n15v2 hard]
+  
+output_folder: analysis/modeling_error_0_1/
+prompt_version: modeling_error_0_1
+temperature: 0.0
+n: 1
+model: o4-mini
+max_completion_tokens: 8192
+max_workers: 32

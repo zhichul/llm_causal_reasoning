@@ -1,0 +1,47 @@
+lines:
+  # rl generic prompt
+  - name: rl 7b strict +filter
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0521_grpo]
+    extractor: extract_0_2
+    scorer: score_tvd
+  - name: rl 7b strict
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+  - name: rl 7b soft
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+
+  - name: rl 32b strict +filter
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+  - name: rl 32b strict
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+  - name: rl 32b soft
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+
+breakdowns:
+  - name: strategy recursion
+    graph_spec: n15v2
+    key: ['strategy_recursion']
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - name: strategy brute force
+    graph_spec: n15v2
+    key: ['strategy_brute_force']
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - name: strategy other
+    graph_spec: n15v2
+    key: ['strategy_other']
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 

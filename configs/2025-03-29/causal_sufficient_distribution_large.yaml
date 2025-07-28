@@ -1,0 +1,52 @@
+seed: 10
+out_dir: data/2025-03-29/interventional_distribution
+type: interventional
+
+model:
+  type: discrete_cpt
+  n_vars:
+    train: [10, 15, 20]
+    eval: [10, 15, 20]
+  n_vals:
+    train: [2, 3, 4]
+    eval: [2, 3, 4]
+
+data:
+  n_models: 
+    train: 1000
+    dev: 200
+    test: 200
+  n_questions_per_model:
+    train: 1000
+    dev: 10
+    test: 10
+  n_observe: 0
+  n_intervene: 1
+  prompt:
+    system: >
+      You will be given the definition of a causal model over discrete random variables specified via a causal directed acyclic graph (DAG).
+      First, you will be provided names of the variables and the values they can take on.
+      Then, you will be given the structure of the DAG, written in in dot format.
+      Next, you will be provided the conditional probability tables (CPTs) of variables given their parents.
+      Finally, you will be tested on questions about the distribution of one variable given interventions on some other variable(s).
+      Please answer to the best of your ability.
+    user: >
+      The variables are {var_names}.
+      They can take on the following values:
+
+      {values}
+
+      The causal model has the following directed acyclic graph structure:
+
+      {graph}
+
+      The conditional probability table has the following values:
+
+      {cpts}
+
+      The intervention is: {intervention}.
+
+      Question: {question}
+    reference:
+      type: distribution
+  max_tries_for_uniqueness: 100

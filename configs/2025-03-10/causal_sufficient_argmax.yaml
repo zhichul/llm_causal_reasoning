@@ -1,0 +1,42 @@
+seed: 10
+out_dir: data/2025-03-10/interventional_argmax
+type: interventional
+
+model:
+  type: discrete_cpt
+  n_vars: 5
+  n_vals: 2
+  name_n_chars: 6
+
+data:
+  n_models: 100
+  n_questions_per_model: 10
+  n_observe: 0
+  n_intervene: 1
+  actions: [0, 1]
+  split:
+    train: 8
+    dev: 1
+    test: 1
+  prompt:
+    system: >
+      You will be given a model name and the relevant variable names.
+      You will be given a directed acyclic causal graph, followed by the conditional probability tables (CPTs).
+      Then you will be asked to answer some questions about a variable, given some intervention.
+      Please answer to the best of your ability.
+    user: >
+      The model name is {model_name}.
+      The relevant variables are {var_names}.
+      The causal model has the following graph structure:
+
+      {graph}
+
+      The conditional probability table has the following values:
+
+      {cpts}
+
+      The intervention is: {intervention}.
+
+      Question: {question}
+    reference:
+      type: argmax

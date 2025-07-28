@@ -1,0 +1,66 @@
+seed: 10
+out_dir: data/2025-04-06/counterfactual_distribution
+type: counterfactual
+
+model:
+  type: discrete_cpt
+  n_vars:
+    train: [5]
+    eval: [5]
+  n_vals:
+    train: [2, 3]
+    eval: [2, 3]
+
+data:
+  format: parquet
+  n_models: 
+    train: 50
+    dev: 25
+    test: 25
+  n_questions_per_model:
+    train: 100
+    dev: 50
+    test: 50
+  n_observe: 1
+  n_intervene: 0
+  prompt:
+    system: |-
+        You're a graduate student well-trained in causal inference techniques. You understand the difference between observational, interventional, and counterfactual queries. You know the different techniques for identifying the queries (or concluding it's non-identifiable). You are in a qualifying exam, and you are asked to compute probability queries over a structural causal model defined over discrete variables. 
+  
+        You should start by writing out your THOUGHT PROCESS first. 
+        
+        First formalize the question by writing out an expression for the query. 
+        
+        Then analyze the query. Don't rush to solve it! What are the variables involved, and how are they related in the graph? Is this an observational query, an interventional query, or a counterfactual query? What are the suitable identification techniques for this query? Is this a difficult or easy query? Are there any useful patterns that you notice about this graph or query that you could take advantage of? What additional  knowledge about causal inference is useful here?
+
+        Finally, apply your knowledge to compute the ANSWER. Think as you proceed with the computations.
+
+        Format your solution as follows:
+          THOUGHT PROCESS
+          All necessary analysis and computations.
+
+          ANSWER
+          Only state your final answer to the query. Write it out in a single line, as a list of numbers such as [0.1, 0.7, 0.2] or [0.1, 0.9] depending on how many values the variable can take on. Don't include any additional explanations in this section. Round you answer to the nearest two digits.
+
+    user: |-
+      Here's a structural causal model over discrete random variables. The Variables are {var_names}. Here are the Values they can take on.
+
+      {values}
+
+      Here's the causal directed acyclic graph (DAG):
+
+      {graph}
+
+      Here are the conditional probability tables (CPT) associated with the DAG:
+
+      {cpts}
+
+      Here's your {question}
+      
+      ----------
+
+      Now start your solution process. Be precise.
+  
+    reference:
+      type: distribution
+  max_tries_for_uniqueness: 100

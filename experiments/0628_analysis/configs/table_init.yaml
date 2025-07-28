@@ -1,0 +1,19 @@
+lines:
+  # rl generic prompt
+  - name: rl 7b init
+    key: [rl, qwen_2.5_instruct, 7b, init, 0521_grpo]
+    scorer: score_tvd
+
+  - name: rl 32b init
+    key: [rl, qwen_2.5_instruct, 32b, init, 0521_grpo]
+    scorer: score_tvd
+    
+metric:
+  key: [accuracy]
+  name: accuracy at threshold 0.01
+  kwargs:
+    - t: 0.01
+    - t: 0.02
+    - t: 0.03
+
+breakdowns: [ve, treewidth, size, depth]

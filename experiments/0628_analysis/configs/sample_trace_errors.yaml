@@ -1,0 +1,67 @@
+lines:
+  # rl generic prompt
+  - name: rl 7b strict +filter
+    key: [rl, qwen_2.5_instruct, 7b, filter, 0521_grpo]
+    extractor: extract_0_2
+    scorer: score_tvd
+  - name: rl 7b strict
+    key: [rl, qwen_2.5_instruct, 7b, strict, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+  - name: rl 7b soft
+    key: [rl, qwen_2.5_instruct, 7b, lenient, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+
+  - name: rl 32b strict +filter
+    key: [rl, qwen_2.5_instruct, 32b, filter, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+  - name: rl 32b strict
+    key: [rl, qwen_2.5_instruct, 32b, strict, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+  - name: rl 32b soft
+    key: [rl, qwen_2.5_instruct, 32b, lenient, 0521_grpo]
+    scorer: score_tvd
+    extractor: extract_0_2
+
+metric:
+  key: [accuracy]
+  name: accuracy at threshold 0.01
+  kwargs:
+    t: 0.02
+
+n: 50
+
+breakdowns:
+  - name: formula error
+    graph_spec: n15v2
+    key: [formula_global]
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - name: copy error
+    graph_spec: n15v2
+    key: [copy_global]
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - name: calculation error
+    graph_spec: n15v2
+    key: [calculation_global]
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - name: no numeric computation error
+    graph_spec: n15v2
+    key: [no_numeric_computation_global]
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4" 
+  - name: other error
+    graph_spec: n15v2
+    key: [other_global]
+    difficulty:
+      key: ['ancestor_size']
+    criterion: "lambda x: x > 4"

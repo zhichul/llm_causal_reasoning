@@ -1,0 +1,41 @@
+lines:
+  - name: train
+    file: ../0406_grpo/data/ppo/n10v2/8k/train.parquet
+    alpha: 1.0
+    color: blue
+  - name: n5v2 dev
+    file: ../0406_grpo/data/ppo/n5v2/2k/dev.parquet
+    alpha: 1.0
+    color: yellow
+  - name: n10v2 dev
+    file: ../0406_grpo/data/ppo/n10v2/2k/dev.parquet
+    alpha: 1.0
+    color: orange
+  - name: n15v2 dev
+    file: ../0406_grpo/data/ppo/n15v2/2k/dev.parquet
+    alpha: 1.0
+    color: red
+
+metrics:
+  - name: relevant graph size
+    key: [ancestor_size]
+    filename: size
+    bins: 'integer'
+  - name: relevant graph depth
+    key: [longest_path_depth]
+    filename: depth
+    bins: 'integer'
+  - name: relevant graph longest shortest path
+    key: [ancestor_depth]
+    filename: old
+    bins: 'integer'
+  - name: relevant graph treewidth
+    key: [ancestor_treewidth]
+    filename: treewidth
+    bins: 'integer'
+  - name: variable elimination arithmetic operations
+    key: [ve_operations]
+    filename: ve
+    bins: 
+      size: 10
+

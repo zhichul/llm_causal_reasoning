@@ -1,0 +1,5 @@
+ancestor_size: "lambda x: x['ancestor_size']"
+longest_path_depth: "lambda x: x['longest_path_depth']"
+ancestor_depth: "lambda x: x['ancestor_depth']"
+ancestor_treewidth: "lambda x: x['ancestor_treewidth']"
+ve_operations: "lambda x: x['min_fill_sums'] + x['min_fill_products']"
