@@ -19,7 +19,7 @@ Our current experiments focus on generalization within a causal level, on interv
 
 See example configurations of synthetic under [configs/](configs/).
 
-### GRPO, DAPO and SFT Training
+## GRPO, DAPO and SFT Training
 Our experiments study RL's generalization across different configurations (GRPO vs. DAPO, soft vs strict reward functions, specific versus generic prompts, smaller vs. larger models).
 
 We use [VeRL](https://github.com/volcengine/verl) for RL and SFT training. Scripts for training (including reward function definitions) and lightweight dataprep into VeRL accepted format is inclued in directories under `experiments`. Stable experiment setups include `0406_grpo`, `0521_grpo`, and `0603_sft`. You'll need to change the huggingface tokens and wandb tokens in the scripts (ones included in scripts are invalidated for safety). Other experiments are either under development or for archival purposes.
@@ -36,7 +36,7 @@ Options:
   --max_checkpoints <int> --graph_spec <str> --save_freq <int> --eval_freq <int>
 ```
 
-### Analyzing Reasoning Traces 
+## Analyzing Reasoning Traces 
 We study both raw accuracy as well as patterns in the reasoning traces to answer our research question about whether models learn genearlizable algorithmic solutions from RLVR training on causal inference problems. As well as compare it to SFT baselines. We find that 7B/32B LLMs learn to modify the graph and margianlize out parents recursively to compute estimate the query, but makes significant modeling errors (e.g. false independence assumptions) during its execution of the strategy.
 
 Scripts for runing inference with [VeRL](https://github.com/volcengine/verl) using vllm as backend is included in `experiments/0603_analysis`.
